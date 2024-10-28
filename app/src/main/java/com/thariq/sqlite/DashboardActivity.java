@@ -99,7 +99,7 @@ public class DashboardActivity extends AppCompatActivity {
     private void selectStudent(int position) {
         Cursor cursor = (Cursor) studentListView.getItemAtPosition(position);
         if (cursor != null) {
-            // Change "id" to "_id"
+            // Use "_id" to retrieve the selected student ID
             selectedStudentId = cursor.getInt(cursor.getColumnIndexOrThrow("_id"));
             studentName.setText(cursor.getString(cursor.getColumnIndexOrThrow("name")));
             studentCourse.setText(cursor.getString(cursor.getColumnIndexOrThrow("course")));
@@ -108,7 +108,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     private void loadStudentData() {
         Cursor cursor = db.getAllStudents();
-        String[] from = new String[]{"_id", "name", "course"};  // Ensure "_id" is included
+        String[] from = new String[]{"name", "course"}; // Only show "name" and "course"
         int[] to = new int[]{R.id.studentNameView, R.id.studentCourseView};
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.student_list_item, cursor, from, to, 0);
