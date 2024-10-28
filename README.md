@@ -10,7 +10,7 @@ This is a simple Android application for managing student records. Users can add
 - View a list of all students with their respective courses.
 
 ## Screenshots
-
+<img src="image/StudentManageScreenshoots.png" alt="Screenshot" style="max-width: 100%; height: auto;">
 
 ## Technologies Used
 
