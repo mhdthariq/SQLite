@@ -16,7 +16,7 @@ This is a simple Android application for managing student records. Users can add
 
 - **Programming Language**: Java
 - **Database**: SQLite
-- **Android SDK**: API level 35 (replace with your target SDK version)
+- **Android SDK**: API level 35
 
 ## Getting Started
 
